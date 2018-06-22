@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD2C2DE6-CF52-444A-8939-124DE555781C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sofstoreInventorySystem</RootNamespace>
+    <AssemblyName>sofstoreInventorySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aboutsof.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aboutsof.Designer.cs">
+      <DependentUpon>Aboutsof.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>adminDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="adminregisterfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminregisterfm.Designer.cs">
+      <DependentUpon>adminregisterfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="category.Designer.cs">
+      <DependentUpon>category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="categoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>categoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creditorfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creditorfm.Designer.cs">
+      <DependentUpon>creditorfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="creditorsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>creditorsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="creditorsrecordsfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="creditorsrecordsfm.Designer.cs">
+      <DependentUpon>creditorsrecordsfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>customerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="customerfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerfm.Designer.cs">
+      <DependentUpon>customerfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerRecordsfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerRecordsfm.Designer.cs">
+      <DependentUpon>customerRecordsfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="debtorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>debtorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="debtors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="debtors.Designer.cs">
+      <DependentUpon>debtors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="debtorsrecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="debtorsrecords.Designer.cs">
+      <DependentUpon>debtorsrecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="expense.Designer.cs">
+      <DependentUpon>expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="expenseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>expenseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="logindataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>logindataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform.Designer.cs">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform1.Designer.cs">
+      <DependentUpon>mainform1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="perfomanceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perfomanceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perfomancefm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="perfomancefm.Designer.cs">
+      <DependentUpon>perfomancefm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchasesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>purchasesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="purchasesfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchasesfm.Designer.cs">
+      <DependentUpon>purchasesfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sales.Designer.cs">
+      <DependentUpon>sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>salesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock.Designer.cs">
+      <DependentUpon>stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stockavailDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>stockavailDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="supplierDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="supplierfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplierfm.Designer.cs">
+      <DependentUpon>supplierfm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="supplierrecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supplierrecords.Designer.cs">
+      <DependentUpon>supplierrecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transaction.Designer.cs">
+      <DependentUpon>transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>transationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="userfm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userfm.Designer.cs">
+      <DependentUpon>userfm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aboutsof.resx">
+      <DependentUpon>Aboutsof.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminregisterfm.resx">
+      <DependentUpon>adminregisterfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="category.resx">
+      <DependentUpon>category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="creditorfm.resx">
+      <DependentUpon>creditorfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="creditorsrecordsfm.resx">
+      <DependentUpon>creditorsrecordsfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerfm.resx">
+      <DependentUpon>customerfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerRecordsfm.resx">
+      <DependentUpon>customerRecordsfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="debtors.resx">
+      <DependentUpon>debtors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="debtorsrecords.resx">
+      <DependentUpon>debtorsrecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="expense.resx">
+      <DependentUpon>expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform.resx">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform1.resx">
+      <DependentUpon>mainform1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="perfomancefm.resx">
+      <DependentUpon>perfomancefm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="purchasesfm.resx">
+      <DependentUpon>purchasesfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sales.resx">
+      <DependentUpon>sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock.resx">
+      <DependentUpon>stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplierfm.resx">
+      <DependentUpon>supplierfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="supplierrecords.resx">
+      <DependentUpon>supplierrecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transaction.resx">
+      <DependentUpon>transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userfm.resx">
+      <DependentUpon>userfm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="adminDataSet.xsc">
+      <DependentUpon>adminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="adminDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>adminDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="adminDataSet.xss">
+      <DependentUpon>adminDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="categoryDataSet.xsc">
+      <DependentUpon>categoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="categoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>categoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="categoryDataSet.xss">
+      <DependentUpon>categoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="creditorsDataSet.xsc">
+      <DependentUpon>creditorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="creditorsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>creditorsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="creditorsDataSet.xss">
+      <DependentUpon>creditorsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="customerDataSet.xsc">
+      <DependentUpon>customerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="customerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>customerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="customerDataSet.xss">
+      <DependentUpon>customerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="debtorDataSet.xsc">
+      <DependentUpon>debtorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="debtorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>debtorDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="debtorDataSet.xss">
+      <DependentUpon>debtorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="expenseDataSet.xsc">
+      <DependentUpon>expenseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="expenseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>expenseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="expenseDataSet.xss">
+      <DependentUpon>expenseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="logindataset.xsc">
+      <DependentUpon>logindataset.xsd</DependentUpon>
+    </None>
+    <None Include="logindataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>logindataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="logindataset.xss">
+      <DependentUpon>logindataset.xsd</DependentUpon>
+    </None>
+    <None Include="perfomanceDataSet.xsc">
+      <DependentUpon>perfomanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="perfomanceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perfomanceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perfomanceDataSet.xss">
+      <DependentUpon>perfomanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="purchasesDataSet.xsc">
+      <DependentUpon>purchasesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="purchasesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>purchasesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="purchasesDataSet.xss">
+      <DependentUpon>purchasesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="salesDataSet.xsc">
+      <DependentUpon>salesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="salesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>salesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="salesDataSet.xss">
+      <DependentUpon>salesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="stockavailDataSet.xsc">
+      <DependentUpon>stockavailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="stockavailDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>stockavailDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="stockavailDataSet.xss">
+      <DependentUpon>stockavailDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="supplierDataSet.xsc">
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="supplierDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>supplierDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="supplierDataSet.xss">
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="transationDataSet.xsc">
+      <DependentUpon>transationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="transationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>transationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="transationDataSet.xss">
+      <DependentUpon>transationDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\7b4z-vero-moda-black-printed-polyester-pencil-skirt_300x300_0.jpg" />
+    <Content Include="images\black-white-pencil-dress.jpg" />
+    <Content Include="images\c1rn-rosella-women-mustered-yellow-long-skirt_300x300_0.jpg" />
+    <Content Include="images\cone-heels.jpg" />
+    <Content Include="images\off-white-floral-printed-skater-dress.jpg" />
+    <Content Include="images\skimp-splurge-handbag-promo.jpg" />
+    <Content Include="images\skimp-splurge-handbags-7-375x375.jpg" />
+    <Content Include="images\slingback-heels.jpg" />
+    <Content Include="images\soflogoo.jpg" />
+    <Content Include="images\stilettos.jpg" />
+    <Content Include="images\western-dress-types-code.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
